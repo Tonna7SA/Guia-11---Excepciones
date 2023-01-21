@@ -24,7 +24,7 @@ public static void main(String[] args) throws ExcepcionPropia {
         
         System.out.println("ingrese su nombre");
         String nombreI = leer.next();
-        if (nombreI.length() < 2) {//Inventando que si ingresa menos 2 es un 
+        if (nombreI.length()<2 ) {//Inventando que si ingresa menos 2 es un 
             throw new ExcepcionPropia(" No ingreso un nombre valido - Vas a tener q reingresar el dato");
         }
         
@@ -32,6 +32,9 @@ public static void main(String[] args) throws ExcepcionPropia {
         byte edadI = leer.nextByte();
         if (edadI < 0) {
             throw new ExcepcionPropia(" Como vas a tener menos que 0 años.....");
+        }
+        if (edadI == 0) {
+            throw new ExcepcionPropia(" Todavia no naciste.....");
         }
 
         System.out.println("LOS DATOS INGRESADOS  SON: "
